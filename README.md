@@ -20,6 +20,16 @@ npm install
 ```sh
 npm run dev
 ```
+
+4. Build for Production
+```sh
+npm run build
+```
+
+5. Preview Production Build
+```sh
+npm run preview
+```
 <!-- USAGE EXAMPLES -->
 
 ## Routing
