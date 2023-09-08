@@ -17,3 +17,12 @@ export async function fetchData<T>(url: string, options?: RequestInit) {
   const data: T = await response.json()
   return data
 }
+
+export const fakeHttpResponse = async (room: Room, delay = 1800) => {
+  const response = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ status: 200, data: { message: 'Successfully mutated', room } })
+    }, delay)
+  })
+  return response
+}

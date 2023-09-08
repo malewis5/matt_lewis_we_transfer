@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 
-import { Base } from '.'
+import { Base } from './Base'
 
 import { render } from '@/utils/tests'
 
