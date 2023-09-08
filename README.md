@@ -39,7 +39,9 @@ This project uses React Router for client-side routing. To create a new route do
 1. Create a folder in the `./pages` directory.
 	* This folder should contain a `page.tsx` file. This is what will render on the route.
 	* This folder should contain a `page.test.tsx` file. This will include tests for the route.
-2. In the `./routes/routes.tsx` add your new route using the following pattern: 
+2. In the `./routes/routes.tsx` add your new route using the following pattern:
+
+   
 	```tsx
 	<Route path="/" element={<Home />} />
 	```
