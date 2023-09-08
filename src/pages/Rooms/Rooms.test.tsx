@@ -56,6 +56,7 @@ test('should render error message when an error occurs', () => {
   })
   render(<Rooms />)
   expect(screen.getByText('Something went wrong. Please try again.')).toBeInTheDocument()
+  vi.unmock('useFetchRooms')
 })
 
 test('should reload the page when Refresh button is clicked', () => {
@@ -77,6 +78,6 @@ test('should reload the page when Refresh button is clicked', () => {
 
   expect(button).toBeInTheDocument()
   expect(button).toBeEnabled()
-
   expect(reloadSpy).toHaveBeenCalledTimes(1)
+  vi.unmock('useFetchRooms')
 })
