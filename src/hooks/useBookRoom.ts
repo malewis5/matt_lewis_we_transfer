@@ -1,7 +1,6 @@
-import { useMutation } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { toast } from 'react-toastify'
 
-import { queryClient } from '@/App'
 import { fakeHttpResponse } from '@/lib/utils'
 
 /**
@@ -9,6 +8,7 @@ import { fakeHttpResponse } from '@/lib/utils'
  * @returns {MutationObserver} The mutation observer object from React Query.
  */
 export const useBookRoom = () => {
+  const queryClient = useQueryClient()
   return useMutation({
     mutationFn: (room: Room) => {
       return fakeHttpResponse(room)
